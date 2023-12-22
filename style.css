@@ -1,0 +1,406 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  /* background-color: #ffA500; */
+  background: linear-gradient(to right,#C33764, #1D2671);
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0px 2px 4px;
+}
+
+.listitems {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-left: 200px;
+  display: flex;
+  align-items: center;
+  /* float: calc(10.8% - 10px); */
+}
+
+.parent_list {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+}
+.parent_list:hover{
+  color: yellow;
+}
+
+li {
+  padding: 0px 30px 0px 0px;
+}
+
+#lawyer_button {
+  background-color: #158bec;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#lawyer_button:hover {
+  transform: translateY(-5px);
+  /* color: yellow; */
+  opacity: 0.8;
+  /* Move the button forward on hover */
+}
+
+#sign_in {
+  background-color: #022b50;
+  color: white;
+  cursor: pointer;
+  height: 35px;
+  border-radius: 10px;
+  width: 100px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+#sign_in:hover {
+  transform: translateY(-5px);
+  color: yellow;
+}
+
+.parent_container {
+  /* margin-top: 10px; */
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  background-image: url(img/main_background.jpg);
+  background-size: cover;
+}
+
+.quote_child_container {
+  width: 50%;
+  /* display: grid; */
+}
+
+#quote {
+  font-size: 80px;
+  padding-top: 10px;
+}
+
+#active_lawyers {
+  display: flex;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+#form_child_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+#form {
+  margin-top: 55px;
+  background-color: white;
+  margin-left: 180px;
+  display: flex;
+  flex-flow: column;
+  /* border: 1px solid; */
+  width: 300px;
+  height: 330px;
+  box-shadow: 0px 2px 4px;
+  padding-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 215px;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: lightblue;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#submit {
+  height: 40px;
+  width: 100px;
+  background-color: #2196f3;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  /* box-shadow: 0px 3px 5px; */
+  border-radius: 5px;
+  position: relative;
+  margin-top: 30px;
+  border: none;
+  left: 55px;
+  cursor: pointer;
+}
+
+/* CHATBOT OPERATIONS */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 38px;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+}
+
+.message {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-message {
+  background-color: #e6f7ff;
+  text-align: right;
+}
+
+.bot-message {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+/* Middle page styling */
+#features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 10px; */
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.feature_class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 11px rgb(4, 7, 7, 3.5);
+  ;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  /* animation-iteration-count: infinite; */
+}
+
+#video_feature:hover {
+  animation-name: features_animation;
+  animation-duration: 1s;
+}
+
+#firm_near:hover {
+  animation-name: features_animation;
+  animation-duration: 1s;
+}
+
+#news:hover {
+  animation-name: features_animation;
+  animation-duration: 1s;
+}
+
+#consulation:hover {
+  animation-name: features_animation;
+  animation-duration: 1s;
+  /* animation-timing-function: ease; */
+}
+
+.feature_headings {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.more_info:hover {
+  color: blue;
+  opacity: 0.4;
+  font-weight: 800;
+}
+/* FAQ */
+#faqsection{
+  /* padding-left: 20px; */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#faqheading{
+  font-weight: 300;
+  padding-bottom: 20px;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  /* padding-left: 10px; */
+}
+.faqcontainer{
+  /* border: 1px solid gray; */
+  outline: 1px solid #cdcdcd;
+
+  margin-bottom: 30px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* height: 130px; */
+  cursor: pointer;
+  width: 80%;
+}
+.question{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  /* width: 100%; */
+  padding: 20px 20px;
+}
+.open_logo{
+cursor: pointer;
+}
+.answers{
+display: none;
+/* border: 1px solid black; */
+border-bottom: none;
+border-right: none;
+border-left: none;
+outline: 1px solid #cdcdcd;
+padding: 20px 20px;
+font-size: .85rem;
+font-weight: 300;
+}
+/* Steps sections */
+#process_container{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 150px;
+}
+.process_headings{
+  display: flex;
+  cursor: pointer;
+}
+.process_sign{
+  position: relative;
+  bottom: 100px;
+  left: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Footer */
+footer {
+  background-color: #000000;
+  /* height: 100px; */
+}
+
+#footer1 {
+  display: flex;
+  align-items: center;
+}
+
+.footer-headings {
+  color: white;
+  /* font-size: 25px; */
+  padding: 0px 40px 0px 60px;
+
+}
+
+.footer-contents {
+  color: white;
+  list-style: none;
+  padding: 0px 0px 10px 0px;
+  cursor: pointer;
+}
+.footer-contents:hover{
+  color: yellow;
+}
+
+#all_service_button {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.footer2_contents {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+
+}
+.footer2_contents:hover{
+  color: yellow;
+}
+
+#social_media {
+  display: flex;
+  align-items: center;
+}
+
+.media_apps {
+  padding: 15px;
+}
+
+#nlsaimg {
+  position: relative;
+  left: 57%;
+  background-color: white;
+  cursor: pointer;
+}
+
+#terms_and_conditions {
+  color: white;
+  width: 1000px;
+  padding-left: 15%;
+}
+
+/* All animations */
+@keyframes features_animation {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}

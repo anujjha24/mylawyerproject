@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lawyer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>  
+    <nav>
+        <img src="img/demo logo.png" alt="company logo" width="100px" height="100px">
+        <ul class="listitems">
+            <li> <button id="lawyer_button"> I am lawyer</button></li>
+            <li class="parent_list"><a>Find Lawyer</a>
+            </li>
+            <li class="parent_list"><a>Legal Advices</a></li>
+            <li class="parent_list"><a>Govt Services</a></li>
+            <li class="parent_list"><a>About</a></li>
+            <li class="parent_list"><button id="sign_in">Sign in</button> </li>
+        </ul>
+    </nav>
+    <div class="parent_container">
+        <div id="quote_child_container">
+            <span id="quote">Let's find best Legal Advise for You</span>
+            <span id="active_lawyers"><span id="number"
+                    style="font-size: 25px; padding-left: 5px; color: green;">00+&nbsp;</span> Active
+                lawyers online</span>
+        </div>
+        <div id="form_child_container">
+            <div id="form">
+                <form action="customer_data" style="display: flex;flex-direction: column; padding:10px 0px 0px 30px;">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id="phone" name="phone" required>
+
+                    <label for="city">City:</label>
+                    <select name="cityname" id="city_name">
+                        <option value="delhi">Delhi</option>
+                        <option value="delhi">Gurgaon</option>
+                        <option value="delhi">Noida</option>
+                        <option value="delhi">Ghaziabad</option>
+                        <option value="delhi">Saket</option>
+                    </select>
+                    <label for="problemType">Problem Type:</label>
+                    <select id="problemType" name="problemType" required>
+                        <option value="technical" selected>Problem Type</option>
+                        <option value="technical">Criminal Case</option>
+                        <option value="billing">Divorce</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <button id="submit">Connect Me</button>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="chat-toggle" onclick="toggleChat()"><img src="img/chatbot.jpeg" alt="" height="50px" width="50px"></div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="message bot-message">Hi there! I'm a chat bot. Ask me anything.</div>
+        <div class="message user-message"></div>
+        <div class="message bot-message"></div>
+    </div>
+    <!-- Middle section of the page includes more features -->
+
+    <div id="features">
+        <div class="feature_class" id="video_feature">
+            <span class="photo_container"> <img src="img/lawyer_video_call.jpg" alt=""></span>
+            <span class="feature_headings">Instant Video Consulation</span>
+            <span class="more_info"> Free video consultation</span>
+        </div>
+        <div class="feature_class" id="firm_near">
+            <span class="photo_container"><img src="img/firms.jpg" alt="" height="183px" width="275px"></span>
+            <span class="feature_headings">Lawyer Firms Near You</span>
+            <span class="more_info">Near You</span>
+        </div>
+        <div class="feature_class" id="news">
+            <span class="photo_container"><img src="img/supreme-court-of-india.jpg" alt="" height="183px"
+                    width="275px"></span>
+            <span class="feature_headings">Latest Judgements</span>
+            <span class="more_info">Click here for latest Judgements</span>
+        </div>
+        <div class="feature_class" id="consulation">
+            <span class="photo_container"><img src="img/consultaion.jpeg" alt="" height="183px" width="275px"></span>
+            <span class="feature_headings">Physical Consulation</span>
+            <span class="more_info">Book Physical consulation today</span>
+
+        </div>
+    </div>
+    <!-- Steps sections -->
+<h1 style="display: flex; justify-content: center;">Follow below steps for consultaion</h1>
+<div id="process_container">
+   <div class="process">
+    <img src="img/fill-form.png" alt="">
+    <span class="process_headings">Fill the form</span>
+    <div class="process_sign"><img src="img/Polygonsign.png" width="50px" height="50px"></div>
+   </div>
+   <div class="process">
+    <img src="img/schedule.png" alt="">
+    <span class="process_headings">Schedule <br>Appointment</span>
+    <div class="process_sign"><img src="img/Polygonsign.png" width="50px" height="50px"></div>
+   </div>
+   <div class="process">
+    <img src="img/make-payment.png" alt="">
+    <span class="process_headings">Make payment</span>
+    <div class="process_sign"><img src="img/Polygonsign.png" width="50px" height="50px"></div>
+   </div>
+ 
+   <div class="process">
+    <img src="img/lawyer.png" alt="">
+    <span class="process_headings">Lawyer will call you</span>
+   </div>
+</div>
+
+    <!-- FAQ section starts from here -->
+    <div id="faqsection">
+        <div id="faqheading">Frequently Asked Questions</div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer1')">
+                This is my question number 1 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer1">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer2')">
+                This is my question number 2 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer2">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer3')">
+                This is my question number 3 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer3">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer4')">
+                This is my question number 4 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer4">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer5')">
+                This is my question number 5 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer5">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer6')">
+                This is my question number 6 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer6">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer7')">
+                This is my question number 7 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer7">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question"onclick="toggleAnswer('answer8')">
+                This is my question number 8 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer8">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question"onclick="toggleAnswer('answer9')">
+                This is my question number 9 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer9">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+        <div class="faqcontainer">
+            <div class="question" onclick="toggleAnswer('answer10')">
+                This is my question number 10 <span class="open_logo"><img src="img/plus-large-icon.png" alt="" width="25px" height="22px"> </span>
+            </div>
+            <div class="answers" id="answer10">
+                This an answer Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, facere!
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div id="footer1">
+            <div id="lawyer-finder">
+                <img src="img/gmap.jpg" alt="" width="200px" height="200px" style="padding:5px 10px">
+                <!-- Here i will attach a small google map which will find lawyers and firms near to me -->
+            </div>
+            <div class="footer-headings"><span
+                    style="font-size: 20px; display: flex; align-items: center; justify-content: center;   font-family: Roboto,sans-serif;">
+                    Trademarks & Copyright</span>
+                <ul>
+                    <li class="footer-contents">Trademark Registaration</li>
+                    <li class="footer-contents">Trademark Objection</li>
+                    <li class="footer-contents">Trademark Assignment</li>
+                    <li class="footer-contents">Trademark Renwal</li>
+                    <li class="footer-contents">Copyright Registration</li>
+                </ul>
+            </div>
+            <div class="footer-headings"><span
+                    style="font-size: 20px;display: flex; align-items: center; justify-content: center;   font-family: Roboto,sans-serif;">Legal
+                    Advices</span>
+                <ul>
+                    <li class="footer-contents">Divorce Legal Advice</li>
+                    <li class="footer-contents">Property Legal Advice</li>
+                    <li class="footer-contents">Criminal Legal Advice</li>
+                    <li class="footer-contents">Consumer Legal Advice</li>
+                    <li class="footer-contents">Legal Forms</li>
+                </ul>
+            </div>
+            <div class="footer-headings"><span
+                    style="font-size: 20px;display: flex; align-items: center; justify-content: center;  font-family: Roboto,sans-serif;">Law
+                    Guides</span>
+                <ul>
+                    <li class="footer-contents">Law Videos</li>
+                    <li class="footer-contents">IPC Sections</li>
+                    <li class="footer-contents">CrPC Sections</li>
+                    <li class="footer-contents">Constition of India</li>
+                    <li class="footer-contents">Divorce Law</li>
+                </ul>
+            </div>
+        </div>
+        <div id="all_service_button">
+            <button
+                style="height: 40px; width: 122px; border-radius: 5px; border-color: yellow; background-color: #000000; color: white; font-weight: 600; cursor: pointer;">View
+                All</button>
+        </div>
+        <div id="footer2">
+            <hr>
+            <span id="about_us" class="footer2_contents">About us</span>
+            <span id="privacy_policy" class="footer2_contents">Privacy Policy</span>
+            <span id="media" class="footer2_contents">Media</span>
+            <span id="contact_us" class="footer2_contents">Contact Us</span>
+            <span id="news" class="footer2_contents">News</span>
+            <hr>
+            <div id="social_media">
+                <span class="media_apps"><img src="img/facebook.png" alt="" width="50px" height="50px"></span>
+                <span><img src="img/insta.png" alt="" class="media_apps" width="50px" height="50px"></span>
+                <span><img src="img/twitter.png" alt="" class="media_apps" width="50px" height="50px"></span>
+                <span class="media_apps"><img src="img/youtube.png" alt="" width="50px" height="50px"></span>
+                <div id="nlsaimg"> <img src="https://lawrato.com/assets/img/logo_nalsa.png" alt="" width="250px"
+                        height="80px"></div>
+            </div>
+            <hr>
+            <div id="terms_and_conditions">
+                <p>This will display multiple links having terms and conditon of the company Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Ex delectus cum dolor deserunt quos eius reiciendis odio, obcaecati
+                    velit, facere quod, possimus atque quaerat cumque. Impedit sed laudantium quam doloribus.</p>
+            </div>
+            <hr style="bottom: 2px;">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
